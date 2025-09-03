@@ -1,6 +1,6 @@
 pandas
+openpyxl
 streamlit
+spacy
 fuzzywuzzy
 python-Levenshtein
-spacy
-en-core-web-sm @ https://github.com/DevarshSabu/CineGenie.AI
