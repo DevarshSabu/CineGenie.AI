@@ -1,3 +1,3 @@
 # CineGenie.AI
 Movie Recommendation AI
-https://devarshmadeit.streamlit.app/
+https://cinegenieai.streamlit.app/
