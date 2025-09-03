@@ -2,7 +2,15 @@ import pandas as pd
 import re
 import streamlit as st
 import spacy
-from fuzzywuzzy import fuzz, process   # ✅ required for fuzzy matching
+from fuzzywuzzy import fuzz, process 
+import subprocess
+import sys
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")# ✅ required for fuzzy matching
 
 # ================================
 # Load Dataset
@@ -190,4 +198,5 @@ if user_query:
         st.warning(results)
     else:
         st.dataframe(results.reset_index(drop=True)) 
+
         
